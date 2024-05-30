@@ -1,11 +1,12 @@
 import { Component, OnInit, inject, Pipe, PipeTransform } from '@angular/core';
 import { RecipeService } from '../../Core/Services/recipe.service';
 import { Recipe, RecipesResponse } from '../../util/models/Recipies';
+import { RecipePipe } from '../../util/Pipes/recipe.pipe';
 
 @Component({
   selector: 'app-recipe-list',
   standalone: true,
-  imports: [],
+  imports: [RecipePipe],
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.css'
 })
